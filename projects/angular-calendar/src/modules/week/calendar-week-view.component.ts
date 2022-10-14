@@ -138,9 +138,7 @@ export interface CalendarWeekViewBeforeRenderEvent extends WeekView {
               rtl ? null : (100 / days.length) * allDayEvent.offset
             "
             [style.marginRight.%]="
-              rtl
-                ? (100 / days.length) * (days.length - allDayEvent.offset) * -1
-                : null
+              rtl ? (100 / days.length) * allDayEvent.offset : null
             "
             mwlResizable
             [resizeSnapGrid]="{ left: dayColumnWidth, right: dayColumnWidth }"
@@ -987,7 +985,10 @@ export class CalendarWeekViewComponent
    * @hidden
    */
   eventDropped(
-    dropEvent: DropEvent<{ event?: CalendarEvent; calendarId?: symbol }>,
+    dropEvent: Pick<
+      DropEvent<{ event?: CalendarEvent; calendarId?: symbol }>,
+      'dropData'
+    >,
     date: Date,
     allDay: boolean
   ): void {

@@ -2,6 +2,38 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.30.1](https://github.com/mattlewis92/angular-calendar/compare/v0.30.0...v0.30.1) (2022-08-15)
+
+
+### Bug Fixes
+
+* add missing SASS entry point ([#1595](https://github.com/mattlewis92/angular-calendar/issues/1595)) ([c83293c](https://github.com/mattlewis92/angular-calendar/commit/c83293c8bea2c27f5b23dd56d76df4063ff7e9de)), closes [#1596](https://github.com/mattlewis92/angular-calendar/issues/1596)
+* restore compatibility with jest 28 ([#1599](https://github.com/mattlewis92/angular-calendar/issues/1599)) ([3cb63e1](https://github.com/mattlewis92/angular-calendar/commit/3cb63e1c4767395a07f504cd915d28fdff006d17))
+
+## [0.30.0](https://github.com/mattlewis92/angular-calendar/compare/v0.29.0...v0.30.0) (2022-08-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* **rtl:** week view all day events with RTL may need some styling adjustments in your application for them to display properly
+* angular 14 or higher is now required to use this package
+* IE11 is no longer supported
+
+### Features
+
+* add secondaryText to event colors that you can use to customise week and day view event text ([6bfbf70](https://github.com/mattlewis92/angular-calendar/commit/6bfbf706688ef33976c61a2e7b716d48a055cceb)), closes [#1375](https://github.com/mattlewis92/angular-calendar/issues/1375)
+* drop support for IE11 ([39b4e76](https://github.com/mattlewis92/angular-calendar/commit/39b4e769d3a268a298d10118ff02f7edc11bea37))
+
+
+### Bug Fixes
+
+* **rtl:** apply styling fixes for non bootstrap 4 layouts ([565a689](https://github.com/mattlewis92/angular-calendar/commit/565a689816bc7804489646d5de7fc409e35e2bbc)), closes [#1583](https://github.com/mattlewis92/angular-calendar/issues/1583)
+
+
+### build
+
+* upgrade to angular 14 ([a496f35](https://github.com/mattlewis92/angular-calendar/commit/a496f3554921829891fa0f9a28632d31bda4ec1c))
+
 ## [0.29.0](https://github.com/mattlewis92/angular-calendar/compare/v0.28.28...v0.29.0) (2021-12-11)
 
 
@@ -810,7 +842,7 @@ If using the mwlDraggable directive anywhere else in your app you will need to a
 * **day-view:** if you were extending the day view component then the internal API has changed slightly and you may need to adjust your app
 * deep module imports angular-calendar/modules/{common,month,week,day} are no longer supported as the package is now treeshakable. To migrate, adjust your imports to be from angular-calendar directly
 * **moment:** the moment weekViewColumnSubHeader format has changed for consistency with the other date formatters
-* there were some minor breaking changes in the drag and drop library that might affect your app if you were using it outside of the calendar. See the changelog for more info: https://github.com/mattlewis92/angular-draggable-droppable/blob/master/CHANGELOG.md
+* there were some minor breaking changes in the drag and drop library that might affect your app if you were using it outside of the calendar. See the changelog for more info: https://github.com/mattlewis92/angular-draggable-droppable/blob/main/CHANGELOG.md
 * **week-view:** events with no end date that are resized now assume to have the start date as the end date
 
 
